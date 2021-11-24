@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+    <title>Dojo Survey</title>
+    </head>
+    <body>
+        <main>
+            <section class="surveyBox">
+                <h1>
+                    Welcome to Quoting Dojo 
+                </h1>
+                <div class="error">
+                    <% if( messages.messageError ){ %>
+                        <p> <%= messages.messageError %> </p>
+                    <% } %>
+                </div>
+                <form action="/" method="POST">
+                    <div class="inputLines">
+                        <label for="name">
+                            Your name:
+                        </label>
+                        <input type="text" id="name" name="name" />
+                    </div>
+                    <div class="inputLines">
+                        <label for="quote">
+                            Your quote:
+                        </label>
+                        <textarea name="quote" id="quote" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit">
+                        Add my quote!
+                    </button>
+                </form>
+                <button>
+                    <a href="/results">Skip to quotes!</a>
+                </button>
+            </section>
+        </main>
+    </body>
+</html>
